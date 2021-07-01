@@ -1,21 +1,28 @@
 var breedEl =document.querySelector('.select-breed');
 
-var requestUrl  ='https://dog.ceo/api/breeds/list/all/';
+var requestUrl  ='https://dog.ceo/api/breeds/list/all';
 
 fetch(requestUrl)
-  .then(response => response.json())
-  .then(function(data) {
-    console.log(data)
-    data.forEach(breed => {
-        var optionEl= document.createElement('<option>').addClass("options");
-        optionEl.value=breed;
-        optionEl.appendTo(breedEl);
+.then(function (response) {
+    if (!response.ok) {
+      throw response.json();
+    }
 
-        
-    
-    
+    return response.json();
   })
-  .catch(console.error(e));
-});
+  .then(function(data) {
+      var data1 =data.message;
+    // console.log(data1)
+    for (let value in data1) {
+        //  console.log(value);
+         var opt= document.createElement('option');
+         opt.appendChild( document.createTextNode(value) );
 
+         // set value property of opt
+         opt.value = value; 
+         
+         // add opt to end of select box (sel)
+         breedEl.appendChild(opt); 
+  }
+  });
 
