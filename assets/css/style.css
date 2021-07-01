@@ -1,0 +1,7 @@
+/* Adding fixed postion to the bottom for our footer */
+.custom-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
