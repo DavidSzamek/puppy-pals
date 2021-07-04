@@ -1,8 +1,15 @@
-/* Adding fixed postion to the bottom for our footer */
-.custom-footer {
+/* Adding fixed postion to the bottom for our footer at desktop size */
+footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+/* Adding sticky postion at tablet and below */
+@media screen and (max-width: 768px) {
+    footer {
+        position: sticky;
+    }
 }
 
 /* form container margins */
