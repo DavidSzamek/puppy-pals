@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PuppyPals</title>
+    <title>PuppyPals LOGIN</title>
 
     <!-- BULMA Link-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
@@ -12,40 +12,98 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- Link to Style Sheet -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
 </head>
 
 <body>
-    <!-- Header to come -->
-    <header>
-        <h3>Nav placeholder</h3>
-    </header>
+
+    <!-- Nav Bar-->
+    <nav class="navbar">
+        <div class="container">
+            <div id="navMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item">
+                        Home
+                    </a>
+                    <a class="navbar-item">
+                        Documentation
+                    </a>
+                </div>
+                
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-dark">GitHub</a>
+                            <a class="button is-link">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
 
     <!-- Login container -->
-    <section class="hero is-success is-fullheight">
+    <section class="hero has-bg-img is-light is-fullheight-with-navbar">
         <div class="hero-body">
             <div class="container">
                 <div class="columns is-centered">
                     <div class="column is-5-tablet is-4-desktop is-3-widescreen">
                         <form action="" class="box">
-                            <img src="Logo will go here"/>
-                                <h1 class="subtitle has-text-black">Login</h1>
+                            <figure class="image">
+                                <img src="./assets/images/logo/logo-yellow.png"/>
+                            </figure>
                                     <form>
+
+                                        <!-- Username Field -->
                                         <div class="field">
-                                           <label for="" class="label">Username</label>
-                                                <div class="control has-icons-left">
-                                                    <input class="input is-medium is-rounded" type="text" placeholder="Username"/>
-                                                        <span class="icon is-small is-left">
-                                                            <i class="fa fa-user"></i>
-                                                        </span>
-                                                </div>
+                                             <div class="control has-icons-left">
+                                                 <input class="input is-rounded" type="text" placeholder="Username"/>
+                                                     <span class="icon is-small is-left">
+                                                        <i class="fa fa-user"></i>
+                                                    </span>
+                                             </div>
                                         </div>
+
+                                        <!-- Password Field -->
+                                        <div class="field">
+                                            <div class="control has-icons-left">
+                                                <input class="input is-rounded" type="password" placeholder="********" />
+                                                    <span class="icon is-small is-left">
+                                                        <i class="fa fa-key"></i>
+                                                    </span>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Login Button -->
+
+                                        <div class="field">
+                                            <a href="landing-page.html" class="button is-fullwidth is-outlined is-rounded"> Login </a>
+                                        </div>
+
+                                       
                                     </form>
+                                        <!-- Register link -->
+                                        <div class="has-text-centered">
+                                            <div>
+                                                <a href="register.html">Don't have an account? Sign up now!</a>
+                                            </div>
+                                        </div>
                         </form>        
             </div>
         </div>
     </section>
 
+    </main>
 
+    <footer class="footer p-5">
+        <div class="has-text-centered">
+            <p>Puppy Pals</p>
+        </div>
+    </footer>
     
     <!-- Added JS -->
     <script src="assets/js/script.js"></script>
