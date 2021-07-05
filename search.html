@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  </head>
+  <body>
+      <header>
+        <header>
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                  <a class="navbar-item" href="https://bulma.io">
+                    <img src="assets/Images/logo/logo-yellow.png" class="image">
+                  </a>
+              
+                  <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                  </a>
+                </div>
+              
+                <div id="navbarBasicExample" class="navbar-menu">
+                  <div class="navbar-end">
+                    <div class="navbar-item">
+                      <div class="buttons">
+                        <a class="button is-primary">
+                          <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-light">
+                          Log in
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+        </header>
+      </header>
+      
+      <main class="section">
+
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="columns is-vcentered">
+
+                    <form class="column is-6">
+                        <div class="field has-addons is-expanded">
+                            <div class="control is-expanded">
+                              <input class="input" type="text" placeholder="Melbourne">
+                            </div>
+                            <div class="control">
+                                <submit type="submit" id="searchDog" class="button is-primary">Submit</submit>
+                              </div>
+                        </div>
+                    </form>
+
+                    <div class="column is-6">
+                        
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-6">
+                        <figure class="image is-4by3">
+                            <img src="https://picsum.photos/800/600/?random" alt="Description">
+                        </figure>
+                    </div>
+                    <div class="column is-6">
+                        <h2 class="subtitle is-4">
+                            Local Puppy Pal Results
+                        </h2>
+                        <div class="card">
+                            <div class="card-content">
+                              <p id="dogNameResponse" class="title">
+                               
+                              </p>
+                              <figure class="image">
+                                <img id="dogImageResponse" alt="Description">
+                              </figure>
+                             
+                            </div>
+                            <footer class="card-footer">
+                              <p class="card-footer-item">
+                                <a id="messageDog">Message</a>
+
+                                <div class="modal">
+                                    <div class="modal-background"></div>
+                                    <div class="modal-card">
+                                      <header class="modal-card-head">
+                                        <p class="modal-card-title">Modal title</p>
+                                        <button class="delete" aria-label="close"></button>
+                                      </header>
+                                      <section class="modal-card-body">
+                                        <!-- Content ... -->
+                                      </section>
+                                        <footer class="modal-card-foot">
+                                            <button class="button is-success">Send Message</button>
+                                        </footer>
+                                    </div>
+                                  </div>
+
+                              </p>
+                              <p class="card-footer-item">
+                                <a id="nextSearchEL">Next</a>
+                              </p>
+                            </footer>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            
+      </main>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="assets/js/script.js"></script>
+      <script src="assets/js/search.js"></script>
+  </body>
+</html>
