@@ -5,6 +5,8 @@ var dogImageEL = $('#dogImageResponse');
 var dogNameEL = $('#dogNameResponse');
 var messageDogEL = $('#messageDog');
 var closeModalEL = $('.delete');
+var displayResultsEL = $('#displayResults');
+var searchBlockEL = $('#searchBlock');
 //document selectors
 
 //Fetch API URL's
@@ -19,6 +21,12 @@ function handleSubmit () {
 
     displayDogImage();
     randdomName();
+
+    displayResultsEL.removeClass('hideBlock');
+
+    searchBlockEL.removeClass('is-12');
+    searchBlockEL.addClass('is-6');
+
 
 };
 
@@ -89,9 +97,3 @@ function init () {
 
 //first function called
 init();
-
-
-
-
-
-
