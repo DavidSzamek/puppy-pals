@@ -24,7 +24,7 @@ function handleSubmit () {
 
     displayResultsEL.removeClass('hideBlock');
 
-    searchBlockEL.removeClass('is-12');
+    searchBlockEL.removeClass('is-12 is-flex is-justify-content-center');
     searchBlockEL.addClass('is-6');
 
 
