@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <META name="viewport" content="width=device-width , initial-scale=1.0">
+            <title>
+                PuppyPal
+            </title>
+            <!---->
+            <link rel="stylesheet" href="dog.css">
+    </head>
+
+    <body>
+        <section>
+           <header>
+               <h1>Connect with other Pets</h1>
+           </header>
+           <p> Enter your dog name</p>
+           <p>
+               <label for="username">Dog's Name:</label>
+               <input id="username" type="text" placeholder="Dog name"/>
+           </p>
+           <p>
+               <label for="date">Proposed Date:</label>
+               <input type="date" id="date" name="dd/mm/yyyy"/>
+           </p>
+           <p>
+               <label for="email">Type in E-mail</label>
+                <input type="email" id="Email" name="Email"/>
+           </p>
+           <p>
+                <label for="Message">Enter your message:</label>
+                <textarea id="comment" placeholder="Write your message"></textarea>
+           </p>
+           <p>
+            <button>Submit</button>
+          </p>
+
+        </section>
+        <script src="dog.js"></script>
+    </body>
+</html>
