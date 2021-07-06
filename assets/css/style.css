@@ -17,3 +17,6 @@ footer {
     margin: 10% 20% 20%;
 }
 
+.hideBlock {
+    display: none;
+}
