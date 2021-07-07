@@ -49,7 +49,7 @@
             <div class="container has-text-centered">
               <div class="content is-medium">
                 <h2>Search for a local Puppy Pal!</h2>
-                <p>Use the search bar to enter your location or the the interactive map to search for local Puppy Pal in your area!</p>
+                <p>Use the search bar to enter your location or use the the interactive map to search for local Puppy Pal in your area!</p>
               </div>
                 <div class="columns is-vcentered">
 
@@ -65,9 +65,18 @@
                     </form>
 
                 </div>
-                <div class="columns">
-                    <div id="searchBlock" class="column is-12 is-flex is-justify-content-center">
-                      <div id='map' style='width: 400px; height: 300px;'></div>
+                <div class="container custom-container">
+                    <div id="searchBlock" class="m-auto">
+                     
+                      <h2 class="subtitle is-4">
+                        Local Puppy Pal Results
+                    </h2>
+
+                    <div class="card custom-container">
+                        <div class="card-content">
+
+
+                          <div id='map' class="m-auto" style='width: 400px; height: 300px;'> <h2 class="subtitle is-4">Click the map to seach for a location</h2></div>
                       <script>
       
                       mapboxgl.accessToken = 'pk.eyJ1IjoibmNvdWdhbiIsImEiOiJja3FydHZmN2Yxdm93Mm5xNHdwNG9lamNxIn0.w_trjgehIa3JUoc4uvGtyA';
@@ -112,6 +121,11 @@
        
                       </script>
                     </div>
+                                              
+                        </div>
+                     
+                    </div>
+
                     <div id="displayResults" class="column is-6 hideBlock">
                         <h2 class="subtitle is-4">
                             Local Puppy Pal Results
@@ -121,8 +135,8 @@
                               <p id="dogNameResponse" class="title">
                                
                               </p>
-                              <figure class="image">
-                                <img id="dogImageResponse" alt="Description">
+                              <figure class="image is-4by3">
+                                <img id="dogImageResponse" class="m-auto" alt="Description">
                               </figure>
                              
                             </div>
