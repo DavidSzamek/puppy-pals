@@ -1,17 +1,21 @@
+//Nav Bar functionality
+$(document).ready(function(){
 var breedEl =document.querySelector('.select-breed');
 
-var dogregistration=[];
+var personList =JSON.parse(localStorage.getItem("personDetails"));
+var loggedIn =JSON.parse(localStorage.getItem("loggedIn"));
+
 
 var dog = {
   dogName : $('#dog-name').val(),
   age:$('#dog-age').val(),
   breed:$('#breed').val(),
   about:$('#dog-info').val(),
-  image:{}
+  image:""
 }
 
 
-const input = document.querySelector('input[type=file]');console.log(input);
+ const input = document.querySelector('input[type=file]');console.log(input);
 
 const fileTypes = [
   "image/apng",
@@ -30,10 +34,12 @@ const fileTypes = [
 function validFileType(file) {
   return fileTypes.includes(file.type);
 }
+// $("input[type=file]").click(function(){
+//   displayImgData( "");
+// });
 
 
-input.addEventListener('click', updateImageDisplay);
-
+$("input[type=file]").change( updateImageDisplay);
 
 function updateImageDisplay() {
   // console.log(input.files)
@@ -44,7 +50,8 @@ function updateImageDisplay() {
       if(validFileType(file)) {
         imgData=URL.createObjectURL(file)
         dog.image=imgData;
-        displayImgData( imgData);
+        // displayImgData( imgData);
+        $('#list').attr('src', imgData);
       } else {
         console.log( `File name ${file.name}: Not a valid file type. Update your selection.`);
 
@@ -55,9 +62,9 @@ function updateImageDisplay() {
 }
 
 function displayImgData(imgData){
-  var span = document.createElement('span');
-  span.innerHTML = '<img class=" image is-rounded is-128X128  " src="' + imgData + '"/>';
-  document.getElementById('list').insertBefore(span, null);
+
+ $('#list').attr('src', imgData);
+  
 }
 
 
@@ -78,10 +85,8 @@ fetch(requestUrl)
         //  console.log(value);
          var opt= document.createElement('option');
          opt.appendChild( document.createTextNode(value) );
-
          // set value property of opt
-         opt.value = value; 
-         
+         opt.value = value;     
          // add opt to end of select box (sel)
          breedEl.appendChild(opt); 
   }
@@ -93,21 +98,19 @@ fetch(requestUrl)
 
 
 $('#submit-dogregistration').click(function(){
+   console.log(personList);
 
+   const findPerson = (x) => x.username == loggedIn;
 
-  
+   var person = personList.find(findPerson);
+    person.dogsRegistered.push(dog);
 
- 
-//   dog.dogName.value =$('#dog-name').value;
-//   dog.age = $('#dog-age').value;
-//   dog.breed =$('#breed').value;
-//   dog.image =$('#dog-image').value;
-//  dog.about =$('#dog-info').value;
+  //  console.log(dog);
+  //   console.log(personList);
 
-  dogregistration.push(dog);
+  localStorage.setItem("personDetails" ,JSON.stringify(personList));
 
-  localStorage.setItem("dog-registration" ,JSON.stringify(dogregistration));
-  
+});
 
 
 });
