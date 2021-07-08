@@ -27,12 +27,15 @@
                     <div class="navbar-end">
                     <div class="navbar-item">
                       <div class="buttons">
-                        <a href="register.html" class="button is-primary">
-                          <strong>Sign up</strong>
+                        <a href="dogRegistration.html" class="button is-primary">
+                          <strong>Register</strong>
                         </a>
-                        <a href="login.html" class="button is-light">
-                          Log in
+                        <a href="search.html" class="button is-light">
+                          Search
                         </a>
+                        <a href="pet-message-page.html" class="button is-primary">
+                          <strong>Message</strong>
+                        </a>                        
                       </div>
                     </div>
                   </div>
@@ -42,8 +45,8 @@
         <main>
 
             <section class="hero is-primary">
-                <div class="hero-body">
-                    <h1 id="userHeading" class="title">Welcome User</h1>
+                <div class="hero-body has-text-centered">
+                    <h1 id="userHeading" class="title">Welcome User!</h1>
                     <p class="subtitle">To your Puppy Pal Profile</p>
                 </div>
             </section>
@@ -52,8 +55,8 @@
 
               <div class="columns features">
 
-                <div class="column is-6">
-                  <div class="card">
+                <div class="column is-6 is-flex is-flex-direction-column">
+                  <div class="card is-flex-grow-1">
                     <div class="card-content">
                       <div class="content">
                         <h4 id="displayDogs">Your Puppy's!</h4>                                   
@@ -62,15 +65,35 @@
                   </div>
                 </div>
 
-                <div class="column is-8">
+                <div class="column is-6">
                   <div class="card">
                     <div class="card-content">
                       <div class="content">
-                        <h4>Register</h4>
-                        <p>Prompt the user to register.</p>
-                        <a href="dogRegistration.html">
-                          <button class="button is-link">Register</button>
+
+                        <div class="m-2">
+                          <h4>Register</h4>
+                          <p>Register your dog to your profile to ensure you can match with other local Puppy Pals.</p>
+                          <a href="dogRegistration.html">
+                            <button class="button is-info is-outlined">Register</button>
+                          </a>
+                        </div>
+
+                        <div class="m-2">
+                        <h4>Search</h4>
+                        <p>Find other local Puppy Pals within your area.</p>
+                        <a href="search.html">
+                          <button class="button is-primary is-outlined">Search</button>
                         </a>
+                      </div>
+
+                      <div class="m-2">
+                        <h4>Message</h4>
+                        <p>Message your Puppy Pals and schedule a puppy date!</p> 
+                        <a href="pet-message-page.html">
+                        <button class="button is-link is-outlined">Message</button>
+                        </a>
+                        <h3>Enjoy!</h3>
+                      </div>
                       
                       </div>
                     </div>
