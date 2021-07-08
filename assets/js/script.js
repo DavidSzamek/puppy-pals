@@ -16,6 +16,9 @@ $(document).ready(function(){
 function addPerson(event){
     // console.log("testing");
     event.preventDefault();
+    if($('#password').val() !== $('#confirm-password').val() ){
+      alert("Password and Confirm Password doesn't match!");
+    }
     var valid = validateForm();
     if(valid){
     var person = {
@@ -59,8 +62,12 @@ function addPerson(event){
     $('#username').val("");
     $('#email').val("");
     $('#location').val("");
-
-    location.replace("landing-page-with-profile.html");
+    if(userExists){
+      location.replace("login.html");
+    }else{
+      location.replace("landing-page-with-profile.html");
+    }
+    
 
 
 
@@ -75,11 +82,12 @@ else{
 
 function validateForm() {
 
-  if($('#username').val() =="" || $('#email').val() =="" || $('#location').val() =="" ||$('#password').val() =="" || $('#confirm-password').val() =="") {
+  if($('#username').val() =="" || $('#email').val() =="" || $('#location').val() =="" ||$('#password').val() =="" || $('#confirm-password').val() =="" ) {
 
     return false ;
   }
-  else{
+  
+else{ 
     return true;
   }
 
