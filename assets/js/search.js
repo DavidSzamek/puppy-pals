@@ -5,11 +5,13 @@ var dogImageEL = $('#dogImageResponse');
 var dogNameEL = $('#dogNameResponse');
 var messageDogEL = $('#messageDog');
 var closeModalEL = $('.delete');
+var displayResultsEL = $('#displayResults');
+var searchBlockEL = $('#searchBlock');
 //document selectors
 
 //Fetch API URL's
 var imageURL = 'https://dog.ceo/api/breeds/image/random';
-var nameURL = 'https://randomuser.me/api';
+var nameURL = 'https://randomuser.me/api?nat=au';
 //Fetch API URL's
 
 //Function to handle a random dog search
@@ -19,6 +21,15 @@ function handleSubmit () {
 
     displayDogImage();
     randdomName();
+
+    displayResultsEL.removeClass('hideBlock');
+
+    searchBlockEL.removeClass('is-12 is-justify-content-center');
+    searchBlockEL.addClass('column is-6');
+    searchBlockEL.parent().removeClass('container custom-container');
+    searchBlockEL.parent().addClass("columns");
+
+    dogImageEL.parent().css('padding', '100px');
 
 };
 
@@ -78,6 +89,16 @@ function closeModal () {
 
 };
 
+//scale dyanmic images
+function scaleImage () {
+    var css;
+    var ratio=$(this).width() / $(this).height();
+    var pratio=$(this).parent().width() / $(this).parent().height();
+    if (ratio<pratio) css={width:'auto', height:'100%'};
+    else css={width:'100%', height:'auto'};
+    $(this).css(css);
+};
+
 //Handle inital function
 function init () {
     searchButtonEL.on('click', handleSubmit);
@@ -85,13 +106,9 @@ function init () {
     
     messageDogEL.on('click', messageDog);
     closeModalEL.on('click', closeModal);
+
+    $('img').on('load', scaleImage);
 };
 
 //first function called
 init();
-
-
-
-
-
-
