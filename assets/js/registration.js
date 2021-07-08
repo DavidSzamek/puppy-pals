@@ -1,18 +1,47 @@
 //Nav Bar functionality
 $(document).ready(function(){
-var breedEl =document.querySelector('.select-breed');
+var breedEl =document.querySelector('#breed');
 
 var personList =JSON.parse(localStorage.getItem("personDetails"));
 var loggedIn =JSON.parse(localStorage.getItem("loggedIn"));
-
+var dogName = $('#dog-name').val();
+var   age = $('#dog-age').val();
+ var  breed = $('#breed').val();
+ var  about= $('#dog-info').val();
+ console.log(dogName,age,breed,about);
 
 var dog = {
-  dogName : $('#dog-name').val(),
-  age:$('#dog-age').val(),
-  breed:$('#breed').val(),
-  about:$('#dog-info').val(),
+  dogName :dogName,
+  age:age,
+  breed:breed,  
+  about:about,
   image:""
 }
+
+
+var requestUrl  ='https://dog.ceo/api/breeds/list/all';
+
+fetch(requestUrl)
+.then(function (response) {
+    if (!response.ok) {
+      throw response.json();
+    }
+
+    return response.json();
+  })
+  .then(function(data) {
+      var data1 =data.message;
+    // console.log(data1)
+    for (let value in data1) {
+        //  console.log(value);
+         var opt= document.createElement('option');
+         opt.appendChild( document.createTextNode(value) );
+         // set value property of opt
+         opt.value = value;     
+         // add opt to end of select box (sel)
+         breedEl.appendChild(opt); 
+  }
+  });
 
 
  const input = document.querySelector('input[type=file]');console.log(input);
@@ -34,9 +63,6 @@ const fileTypes = [
 function validFileType(file) {
   return fileTypes.includes(file.type);
 }
-// $("input[type=file]").click(function(){
-//   displayImgData( "");
-// });
 
 
 $("input[type=file]").change( updateImageDisplay);
@@ -68,37 +94,11 @@ function displayImgData(imgData){
 }
 
 
-var requestUrl  ='https://dog.ceo/api/breeds/list/all';
-
-fetch(requestUrl)
-.then(function (response) {
-    if (!response.ok) {
-      throw response.json();
-    }
-
-    return response.json();
-  })
-  .then(function(data) {
-      var data1 =data.message;
-    // console.log(data1)
-    for (let value in data1) {
-        //  console.log(value);
-         var opt= document.createElement('option');
-         opt.appendChild( document.createTextNode(value) );
-         // set value property of opt
-         opt.value = value;     
-         // add opt to end of select box (sel)
-         breedEl.appendChild(opt); 
-  }
-  });
-
-
-
 
 
 
 $('#submit-dogregistration').click(function(){
-   console.log(personList);
+   console.log(personList,dog);
 
    const findPerson = (x) => x.username == loggedIn;
 
