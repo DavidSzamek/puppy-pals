@@ -16,10 +16,14 @@ $(document).ready(function(){
 function addPerson(event){
     // console.log("testing");
     event.preventDefault();
+    if($('#password').val() !== $('#confirm-password').val() ){
+      alert("Password and Confirm Password doesn't match!");
+    }
+    var valid = validateForm();
+    if(valid){
     var person = {
     username :$('#username').val(),
     email: $('#email').val(),
-    suburb :$('#suburb').val(),
     location :$('#location').val(),
     pswd :$('#password').val(),
     dogsRegistered:[]
@@ -30,41 +34,6 @@ function addPerson(event){
    var list =JSON.parse(localStorage.getItem("personDetails"));
 
   
-
-
-    // if(list === null){
-    //   personList.push(person);
-    //   console.log(personList);
-    // }
-    // else
-    // {  console.log(list);
-    //   list.forEach(x => {
-    //     console.log(x,x.username, person.username)
-    //       if(x.username == person.username || x.email == person.email){
-    //         personList.push(list);
-    //        alert("person already exist, please try to login!");
-    //        return false;
-    //        }
-    //        personList.push(person);
-    //       });
-
-    //   console.log(personList);
-            
-    // }
-          
-
-    
-    
-
-   
-    // if(!list){
-    //   list.forEach(x => {
-    //   if(x.username === person.username || x.email === person.email){
-    //    alert("person already exist, please try to login!");
-    //    }
-    //   });
-    //   personList.push(list);
-    // }
     var userExists =false;
     if(list === null){
       personList.push(person);
@@ -89,10 +58,40 @@ function addPerson(event){
     // console.log(JSON.stringify(personList));
     localStorage.setItem("loggedIn", JSON.stringify(loggedinUser));
     localStorage.setItem("personDetails", JSON.stringify(personList));
-    location.replace("landing-page-with-profile.html");
+
+    $('#username').val("");
+    $('#email').val("");
+    $('#location').val("");
+    if(userExists){
+      location.replace("login.html");
+    }else{
+      location.replace("landing-page-with-profile.html");
+    }
+    
+
+
+
+
+}
+else{
+
+  alert("Please enter all the values");
+}
 
 }
 
+function validateForm() {
+
+  if($('#username').val() =="" || $('#email').val() =="" || $('#location').val() =="" ||$('#password').val() =="" || $('#confirm-password').val() =="" ) {
+
+    return false ;
+  }
+  
+else{ 
+    return true;
+  }
+
+}
 
 
 

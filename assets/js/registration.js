@@ -2,22 +2,22 @@
 $(document).ready(function(){
 var breedEl =document.querySelector('#breed');
 
-var personList =JSON.parse(localStorage.getItem("personDetails"));
+
+  var personList =JSON.parse(localStorage.getItem("personDetails"));
 var loggedIn =JSON.parse(localStorage.getItem("loggedIn"));
-var dogName = $('#dog-name').val();
-var   age = $('#dog-age').val();
- var  breed = $('#breed').val();
- var  about= $('#dog-info').val();
- console.log(dogName,age,breed,about);
+
+
+//  console.log(dogName,age,breed,about);
+
+
 
 var dog = {
-  dogName :dogName,
-  age:age,
-  breed:breed,  
-  about:about,
+  dogName :$('#dog-name').val(),
+  age:$('#dog-age').val(),
+  breed:$('#breed').val(),  
+  about:$('#about').val(),
   image:""
 }
-
 
 var requestUrl  ='https://dog.ceo/api/breeds/list/all';
 
@@ -98,17 +98,31 @@ function displayImgData(imgData){
 
 
 $('#submit-dogregistration').click(function(){
+  dog.dogName = $('#dog-name').val();
+  dog.age = $('#dog-age').val();
+  dog.breed = $('#breed').val();
+  dog.about= $('#about').val();
+
    console.log(personList,dog);
 
    const findPerson = (x) => x.username == loggedIn;
 
    var person = personList.find(findPerson);
+
+   console.log(person)
     person.dogsRegistered.push(dog);
 
   //  console.log(dog);
   //   console.log(personList);
 
   localStorage.setItem("personDetails" ,JSON.stringify(personList));
+
+  $('#dog-name').val("");
+  $('#dog-age').val("");
+  // $('#breed').text('');
+  $('#about').val("");
+
+  location.replace("landing-page-with-profile.html");
 
 });
 
