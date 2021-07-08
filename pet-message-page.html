@@ -4,42 +4,88 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <META name="viewport" content="width=device-width , initial-scale=1.0">
-            <title>
-                PuppyPal
-            </title>
+            
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">    
+            
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <title>
+                     PuppyPal
+                </title>
             <!---->
-            <link rel="stylesheet" href="assets\css\dog.css">
+            
     </head>
 
     <body>
-        <section>
-           <header>
-               <h1>Connect with other Pets</h1>
-           </header>
-           <p> Enter your dog name</p>
-           <p>
-               <label for="username">Dog's Name:</label>
-               <input id="username" type="text" placeholder="Dog name"/>
-           </p>
-           <p>
-               <label for="date">Proposed Date:</label>
-               <input type="date" id="date" name="dd/mm/yyyy"/>
-           </p>
-           <p>
-               <label for="email">Type in E-mail</label>
-                <input type="email" id="Email" name="Email"/>
-           </p>
-           <p>
-                <label for="Message">Enter your message:</label>
-                <div>
-                <textarea id="Message-box" placeholder="Write your message"></textarea>
-                </div>
-           </p>
-           <p>
-            <button>Send</button>
-          </p>
+        
+        <header>
+            <h1>
+                <strong>Connect with other Pets</strong>
+            </h1>
+        </header>
 
-        </section>
+        <div class="hero is-info is-fullheight">
+            <div class="hero body">        
+                <div class="container ">
+                    <div class="column is-mobile">
+                            <div class=""> 
+                                    <form action=""  class="box">
+                                        <form>
+                                        <div class="">
+                                                <!-- -->
+                                                    <div class="card-image">
+                                                        <figure class="image is-16by9">
+                                                        <img src="assets\images\dogs-louis-wain-print-1595944261EHC.jpg" alt="Placeholder image">
+                                                        </figure>
+                                                    </div>
+                                                </form>
+                                        <!-- -->
+                                        <form>
+                                    <div class="field">
+                                        <label class="label">Dog's Name</label>
+                                            <div class="control">
+                                                <input class="input is-small" type="text" placeholder="Dog's name">
+                                            </div>
+                                    </div>
+                                </form>
+                                            <!-- -->
+                                            <form>
+                                    <div class="field">
+                                        <label class="label">Email</label>
+                                            <div class="control">
+                                                <input class="input is-small" type="email" placeholder="email@website.com">
+                                            </div>
+                                    </div>
+                                </form>
+                                            <!-- -->
+                                            <form>
+                                    <div class="field">
+                                        <label class="label">Proposed Date:</label>
+                                        <input class="date" type="date" id="date" name="dd/mm/yyyy"/>
+                                    </div>
+                                </form>
+                                        <!-- -->
+                                        <form>
+                                    <div class="field">
+                                        <label class="label">Message</label>
+                                            <div class="control">
+                                                <textarea class="textarea is-small" placeholder="Textarea"></textarea>
+                                            </div>
+                                    </div>
+                                </form>
+                                        <!-- -->
+                                    <div class="field is-grouped">
+                                        <div class="control">
+                                            <button class="button is-link">Send</button>
+                                        </div>
+                                    </div>
+                                    </form>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>  
         <script src="dog.js"></script>
     </body>
 </html>
