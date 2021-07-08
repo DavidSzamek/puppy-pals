@@ -12,12 +12,12 @@ function checkLogin () {
 };
 
 function addUserName () {
+    
     var userOut = JSON.parse(localStorage.getItem('personDetails'));
 
     profileName = userOut[0].username;
 
-    userHeading.text('Welcome ' + profileName);
-
+    userHeading.text('Welcome ' + profileName + '!');
 
 }
 
