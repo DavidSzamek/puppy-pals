@@ -16,6 +16,8 @@ $(document).ready(function(){
 function addPerson(event){
     // console.log("testing");
     event.preventDefault();
+    var valid = validateForm();
+    if(valid){
     var person = {
     username :$('#username').val(),
     email: $('#email').val(),
@@ -56,7 +58,6 @@ function addPerson(event){
 
     $('#username').val("");
     $('#email').val("");
-    // $('#breed').text('');
     $('#location').val("");
 
     location.replace("landing-page-with-profile.html");
@@ -65,7 +66,24 @@ function addPerson(event){
 
 
 }
+else{
 
+  alert("Please enter all the values");
+}
+
+}
+
+function validateForm() {
+
+  if($('#username').val() =="" || $('#email').val() =="" || $('#location').val() =="" ||$('#password').val() =="" || $('#confirm-password').val() =="") {
+
+    return false ;
+  }
+  else{
+    return true;
+  }
+
+}
 
 
 
