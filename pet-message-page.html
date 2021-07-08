@@ -6,7 +6,7 @@
         <META name="viewport" content="width=device-width , initial-scale=1.0">
             
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">    
-            
+
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                 <title>
                      PuppyPal
@@ -14,9 +14,9 @@
             <!---->
             
     </head>
-
+  
     <body>
-        
+        <!--header title and navbar-->
         <header>
             <nav class="navbar" role="navigation" aria-label="main navigation">
                 <div class="navbar-brand">
@@ -53,24 +53,30 @@
                 </div>
               </nav>
         </header>
-
+        <!--- defining the page background color and layout as column-->
         <div class="hero is-info is-fullheight">
-            <div class="hero body">        
-                <div class="container ">
-                    <div class="column is-mobile">
-                            <div class=""> 
-                                    <form action=""  class="box">
-                                        <form>
-                                        <div class="">
-                                                <!-- -->
-                                                    <div class="card-image">
-                                                        <figure class="image is-16by9">
-                                                        <img src="assets\images\dogs-louis-wain-print-1595944261EHC.jpg" alt="Placeholder image">
-                                                        </figure>
-                                                    </div>
-                                                </form>
-                                        <!-- -->
-                                        <form>
+            <div class="hero body">  
+                <div class="columns">
+                    <div class="column is-centered ">
+                        <div class="column is-half is-offset-one-quarter"> 
+                            <div class="card-image">
+                                <figure class="">
+                                    <!--adding an image-->
+                                    <img src="assets\images\dogs-louis-wain-print-1595944261EHC.jpg" alt="Placeholder image">
+                                </figure>
+                             </div>
+                        </div>
+                     </div>
+                </div>
+                  <!--the input entry section--> 
+                <div class="columns">
+                    <div class="column is-centered ">
+                        <div class="column is-one-third is-offset-one-third"> 
+                            <form action=""  class="box">
+                                <form>
+                                    <div class="">               
+                                </form>
+                                <form>
                                     <div class="field">
                                         <label class="label">Dog's Name</label>
                                             <div class="control">
@@ -79,44 +85,44 @@
                                     </div>
                                 </form>
                                             <!-- -->
-                                            <form>
+                                <form>
                                     <div class="field">
                                         <label class="label">Email</label>
-                                            <div class="control">
-                                                <input class="input is-small" type="email" placeholder="email@website.com">
-                                            </div>
+                                        <div class="control">
+                                            <input class="input is-small" type="email" placeholder="email@website.com">
+                                        </div>
                                     </div>
                                 </form>
                                             <!-- -->
-                                            <form>
+                                <form>
                                     <div class="field">
                                         <label class="label">Proposed Date:</label>
                                         <input class="date" type="date" id="date" name="dd/mm/yyyy"/>
                                     </div>
                                 </form>
                                         <!-- -->
-                                        <form>
+                                <form>
                                     <div class="field">
                                         <label class="label">Message</label>
-                                            <div class="control">
-                                                <textarea class="textarea is-small" placeholder="Textarea"></textarea>
-                                            </div>
+                                        <div class="control">
+                                            <textarea class="textarea is-small" placeholder="Textarea"></textarea>
+                                        </div>
                                     </div>
                                 </form>
                                         <!-- -->
                                     <div class="field is-grouped">
                                         <div class="control">
-                                            <button class="button is-link">Send</button>
-                                        </div>
+                                            <button class="button is-success is-rounded">Send</button>
                                     </div>
-                                    </form>
-                            </div>
-                        </div> 
-                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div> 
                 </div>
-            </div> 
-        </div>
-    </div>  
-        <script src="dog.js"></script>
+            </div>
+        </div> 
+
+  
+    <script src="dog.js"></script>
     </body>
 </html>
