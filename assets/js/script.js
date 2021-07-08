@@ -89,6 +89,7 @@ function addPerson(event){
     // console.log(JSON.stringify(personList));
     localStorage.setItem("loggedIn", JSON.stringify(loggedinUser));
     localStorage.setItem("personDetails", JSON.stringify(personList));
+    location.replace("landing-page-with-profile.html");
 
 }
 
