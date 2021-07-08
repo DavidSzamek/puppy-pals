@@ -20,3 +20,8 @@
 .hideBlock {
     display: none;
 }
+
+.custom-container {
+    width: fit-content;
+    margin: auto;
+};
