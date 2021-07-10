@@ -3,48 +3,45 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Puppy Pals</title>
+        <title>Profile | PuppyPals </title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
-        <header>
-            <nav class="navbar" role="navigation" aria-label="main navigation">
-                <div class="navbar-brand">
-                  <a class="image is-96x96" href="landing-page.html">
-                    <img src="assets/Images/logo/logo-yellow.png" class="image">
-                  </a>
-
-                             
-                  <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                  </a>
-                </div>
-              
-                <div id="navbarBasicExample" class="navbar-menu">
-                    <div class="navbar-end">
-                    <div class="navbar-item">
-                      <div class="buttons">
-                        <a href="dogRegistration.html" class="button is-primary">
-                          <strong>Register</strong>
-                        </a>
-                        <a href="search.html" class="button is-light">
-                          Search
-                        </a>
-                        <a href="pet-message-page.html" class="button is-primary">
-                          <strong>Message</strong>
-                        </a>                        
-                      </div>
-                    </div>
+      <header>
+        <nav class="navbar is-link" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <!-- <h1 class="title m-3 ml-5 is-underlined">PuppyPals</h1> -->
+          
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-end">
+                <div class="navbar-item">
+                  <div class="buttons">
+                    <a href="dogRegistration.html" class="button is-ghost has-text-white">
+                      Register your dog
+                    </a>
+                    <a href="search.html" class="button is-ghost has-text-white">
+                      Search
+                    </a>
+                    <a href="landing-page.html" class="button is-ghost has-text-white">
+                      Log out
+                    </a>
                   </div>
                 </div>
-              </nav>
-        </header>
+              </div>
+            </div>
+          </nav>
+    </header>
         <main>
 
-            <section class="hero is-primary">
+            <section class="hero-has-navbar is-link">
                 <div class="hero-body has-text-centered">
                     <h1 id="userHeading" class="title">Welcome User!</h1>
                     <p class="subtitle">To your Puppy Pal Profile</p>
@@ -71,28 +68,14 @@
                       <div class="content">
 
                         <div class="m-2">
-                          <h4>Register</h4>
-                          <p>Register your dog to your profile to ensure you can match with other local Puppy Pals.</p>
-                          <a href="dogRegistration.html">
-                            <button class="button is-info is-outlined">Register</button>
-                          </a>
-                        </div>
-
-                        <div class="m-2">
-                        <h4>Search</h4>
-                        <p>Find other local Puppy Pals within your area.</p>
-                        <a href="search.html">
-                          <button class="button is-primary is-outlined">Search</button>
-                        </a>
-                      </div>
-
-                      <div class="m-2">
-                        <h4>Message</h4>
-                        <p>Message your Puppy Pals and schedule a puppy date!</p> 
-                        <a href="pet-message-page.html">
-                        <button class="button is-link is-outlined">Message</button>
-                        </a>
-                        <h3>Enjoy!</h3>
+                          <h1 class="title">Simple tips to get started!</h1>
+                            <div class="m-2">
+                              <p class="subtitle">1. Register your four legged friend/s</p>
+                              <p class="subtitle">2. Search your local area</p>
+                              <p class="subtitle">3. Connect with your furr-ever friend</p>
+                              <p class="subtitle">4. Enjoy!</p>
+                            </div>
+                          <h1 class="title is-4">Click here to get started!</h1>
                       </div>
                       
                       </div>
@@ -105,15 +88,6 @@
             </section>          
 
         </main> 
-
-        <footer class="footer p-5 custom-footer">
-            <div class="has-text-centered">
-              <a href="landing-page.html">
-                <p>Puppy Pals</p>
-              </a>
-                
-            </div>
-        </footer>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="assets/js/script.js"></script>
