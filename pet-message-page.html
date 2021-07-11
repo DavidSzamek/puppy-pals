@@ -9,64 +9,58 @@
 
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                 <title>
-                     PuppyPal
+                     Message | PuppyPal
                 </title>
             <!---->
             
     </head>
   
-    <body>
-        <!--header title and navbar-->
-        <header>
-            <nav class="navbar" role="navigation" aria-label="main navigation">
-                <div class="navbar-brand">
-                  <a class="image is-96x96" href="landing-page.html">
-                    <img src="assets/Images/logo/logo-yellow.png" class="image">
-                  </a>
-              
-                  <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                  </a>
-                </div>
-              
-                <div id="navbarBasicExample" class="navbar-menu">
-                  <div class="navbar-end">
-                    <div class="navbar-item">
-                      <div class="buttons">
-                        <a href="search.html" class="button is-primary">
-                          <strong>Search</strong>
-                        </a>
-                        <a href="dogRegistration.html" class="button is-light">
-                          Register Dog
-                        </a>
-                        <a href="register.html" class="button is-primary">
-                          <strong>Sign up</strong>
-                        </a>
-                        <a href="login.html" class="button is-light">
-                          Log in
-                        </a>
-                      </div>
-                    </div>
+    <header>
+        <nav class="navbar is-link" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <!-- <h1 class="title m-3 ml-5 is-underlined">PuppyPals</h1> -->
+          
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-end">
+                <div class="navbar-item">
+                  <div class="buttons">
+                    <a href="dogRegistration.html" class="button is-ghost has-text-white">
+                      Register a dog
+                    </a>
+                    <a href="search.html" class="button is-ghost has-text-white">
+                      Search
+                    </a>
+                    <a href="landing-page-with-profile.html" class="button is-ghost has-text-white">
+                      Profile
+                    </a>
                   </div>
                 </div>
-              </nav>
-        </header>
+              </div>
+            </div>
+          </nav>
+    </header>
         <!--- defining the page background color and layout as column-->
-        <div class="hero is-info is-fullheight">
+        <section class="hero is-light is-fullheight" style="background-image: url('./assets/images/backgrounds/prints2.png'); background-size: cover;">
+        <div class="hero is-fullheight">
             <div class="hero body">  
                 <div class="columns">
                     <div class="column is-centered ">
                         <div class="column is-half is-offset-one-quarter"> 
                             <div class="card-image">
-                                <figure class="">
-                                    <!--adding an image-->
+                                <!-- <figure class="">
+                                    
                                     <img src="assets\images\dogs-louis-wain-print-1595944261EHC.jpg" alt="Placeholder image">
-                                </figure>
-                             </div>
+                                </figure> -->
+                            </div>
                         </div>
-                     </div>
+                    </div>
                 </div>
                   <!--the input entry section--> 
                 <div class="columns">
@@ -78,16 +72,16 @@
                                 </form>
                                 <form>
                                     <div class="field">
-                                        <label class="label">Dog's Name</label>
+                                        <label class="label">Your dog</label>
                                             <div class="control">
-                                                <input class="input is-small" type="text" id="dogName" placeholder="Dog's name">
+                                                <input class="input is-small" type="text" id="dogName" placeholder="Enter your dogs name">
                                             </div>
                                     </div>
                                 </form>
                                             <!-- -->
                                 <form>
                                     <div class="field">
-                                        <label class="label">Email</label>
+                                        <label class="label mt-3">Your email</label>
                                         <div class="control">
                                             <input class="input is-small" type="email" id="email" placeholder="email@website.com">
                                         </div>
@@ -96,23 +90,23 @@
                                             <!-- -->
                                 <form>
                                     <div class="field">
-                                        <label class="label">Proposed Date:</label>
+                                        <label class="label mt-3">Proposed Date:</label>
                                         <input class="date" type="date" id="date" name="dd/mm/yyyy"/>
                                     </div>
                                 </form>
                                         <!-- -->
                                 <form>
                                     <div class="field">
-                                        <label class="label">Message</label>
+                                        <label class="label mt-3">Message</label>
                                         <div class="control">
-                                            <textarea class="textarea is-small" placeholder="Textarea"></textarea>
+                                            <textarea class="textarea is-small" placeholder="Enter your message here"></textarea>
                                         </div>
                                     </div>
                                 </form>
                                         <!-- -->
                                     <div class="field is-grouped">
-                                        <div class="control">
-                                            <button class="button is-success is-rounded" id="send">Send</button>
+                                        <div class="control mt-3">
+                                            <button class="button is-link is-rounded" id="send">Send</button>
                                     </div>
                                 </div>
                             </form>
@@ -121,8 +115,9 @@
                 </div>
             </div>
         </div> 
+    </section>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
     <script src="dog.js"></script>
     </body>
 </html>
