@@ -78,7 +78,9 @@ function randdomName () {
 //Opens modal to allow user to message the matched dog
 function messageDog () {
 
-    $('.modal').addClass("is-active");
+    // $('.modal').addClass("is-active");
+
+    location.replace("pet-message-page.html");
 
 };
 
