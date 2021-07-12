@@ -27,16 +27,16 @@ function addDogsToProfile () {
 
     var dogs = userOut[0].dogsRegistered;
 
-    if (dogs == null) {
+    if (dogs.length < 1) {
 
-        var text = '<p>You have not registered a Dog! follow the prompts to register your first dog to your profile</p>';
+        var text = '<p class="mt-2 has-text-weight-normal">You have not registered a Dog! follow the prompts to register your first dog to your profile.</p>';
         
         displayDogsEL.append(text);
     }
 
     dogs.forEach(dog => {
 
-        var dogNameEL = '<h5>'+ dog.dogName +'</h5>'
+        var dogNameEL = '<h3 class="mt-2">'+ dog.dogName +'</h3>'
         var dogAttributesEL = '<ul><li class="has-text-weight-normal">Age: '+ dog.age +'</li><li class="has-text-weight-normal">Breed: '+ dog.breed +'</li></ul>';
 
         displayDogsEL.append(dogNameEL);
