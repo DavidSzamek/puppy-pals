@@ -1,66 +1,28 @@
-# Unit 07: Project 1
+# Puppy Pals
+Repository containing group 2's Project 1.
 
-## Overview
+## User Story
+* AS A dog owner
+* I WANT an easy way to connect with other dog owners in my area 
+* SO THAT I can meet up with other dog owners
 
-Welcome to Project 1! This is an important step in your full-stack journey as you will now use your newly acquired skills and knowledge to build web application from scratch. With your team, you will conceive and execute a design that solves a real-world problem by integrating data received from multiple server-side API requests. 
+## Deployed Application
+Link to deployed application: https://davidszamek.github.io/puppy-pals/
 
-Because you will be working collaboratively, you will learn agile development methodologies and implement feature and bug fixes using git branch workflow and pull requests.
+## Application Screenshot
+The following image shows the web application's appearance and functionality:
 
-## Key Topics
+![image](https://user-images.githubusercontent.com/84214872/125263189-2a30f700-e346-11eb-84cc-abaa90d63632.png)
 
-The following topics will be covered in this unit:
+![image](https://user-images.githubusercontent.com/84214872/125263255-37e67c80-e346-11eb-91e5-416a774238f6.png)
 
-* [Server-side APIs](https://en.wikipedia.org/wiki/Web_API)
+![image](https://user-images.githubusercontent.com/84214872/125263369-4f256a00-e346-11eb-90de-23454aef4a04.png)
 
-* [Git branching workflow](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)
+![image](https://user-images.githubusercontent.com/84214872/125263473-66645780-e346-11eb-8c8d-77b4a76cab19.png)
 
-* [Agile software development](https://en.wikipedia.org/wiki/Agile_software_development)
 
-## Learning Objectives
 
-You will be employer-ready if you are able to:
 
-* Speak technically about a feature you implemented in your project
 
-* Explain and execute git branching workflow in a collaborative project
 
-* Resolve merge conflicts
 
-* Explain agile software development
-
-* Design, build, and deploy a client-side web application using GitHub Pages
-
-* Prepare a professional presentation and repository README for your project
-
-## Homework
-
-With your team, you'll conceive and execute a design that solves a real-world problem by integrating data received from multiple server-side API requests. You will also learn about agile development methodologies to help you work collaboratively. You will implement feature and bug fixes using git branch workflow and pull requests. 
-
-You will write your own user stories and acceptance criteria in GitHub Issues to help your team stay on track with the project. Using GitHub Project as a means to track the status of your project tasks will help you understand the benefits of Kanban boards. 
-
-## Career Connection
-
-For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](https://mycareerspot.org/).
-
-## Heads-Up
-
-In the next unit, you'll continue to work on your group projects. You'll end the week by presenting your project to your class. Once your project is complete, you'll want to update your professional materials and add your new project to your portfolio.
-
-## Resources
-
-Here are some additional resources to help solidify the topics covered in this unit.
-
-### Full-Stack Blog Posts
-
-Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, like walkthroughs, articles, and installation guides.
-
-  * 📖 [API Resources](https://coding-boot-camp.github.io/full-stack/apis/api-resources)
-
-### General
-
-Refer to these resources for additional information about topics covered in this unit.
-
-  * 📖 [Learn Enough Git to Be Dangerous](https://www.learnenough.com/git-tutorial/getting_started)
-
-- - -
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
