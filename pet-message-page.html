@@ -8,6 +8,8 @@
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">    
 
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+            <link rel="stylesheet" href="assets/css/style.css">
                 <title>
                      Message | PuppyPal
                 </title>
@@ -50,8 +52,8 @@
           </nav>
     </header>
         <!--- defining the page background color and layout as column-->
-        <section class="hero is-light is-fullheight" style="background-image: url('./assets/images/backgrounds/prints2.png'); background-size: cover;">
-        <div class="hero is-fullheight">
+        <main class="hero is-light custom-main" style="background-image: url('./assets/images/backgrounds/prints2.png'); background-size: cover;">
+        <div class="hero">
             <div class="hero body">  
                 <div class="columns">
                     <div class="column is-centered ">
@@ -71,13 +73,21 @@
                         <div class="column is-one-third is-offset-one-third"> 
                             <form action=""  class="box">
                                 <form>
-                                    <div class="">               
+                                    <div class="content">
+                                        <h2 id="dogName" class="title is-2 has-text-centered">Other dog</h2>
+                                        <figure class="image is-4by3" style="padding: 100px;">
+                                            <img id="dogImageResponse" class="m-auto" alt="Description" src="">
+                                          </figure>          
                                 </form>
                                 <form>
                                     <div class="field">
                                         <label class="label">Your dog</label>
                                             <div class="control">
-                                                <input class="input is-small" type="text" id="dogName" placeholder="Enter your dogs name">
+                                                <!-- <input class="input is-small" type="text" id="dogName" placeholder="Enter your dogs name"> -->
+                                                <div class="select">
+                                                    <select id="yourDogEL">
+                                                    </select>
+                                                  </div>
                                             </div>
                                     </div>
                                 </form>
@@ -118,7 +128,12 @@
                 </div>
             </div>
         </div> 
-    </section>
+
+        <div class="notification is-primary has-text-centered hideBlock">
+            <button class="delete"></button>
+            Message Sent
+          </div>
+        </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
     <script src="dog.js"></script>
