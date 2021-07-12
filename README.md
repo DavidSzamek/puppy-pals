@@ -1,5 +1,6 @@
 # Puppy Pals
-Repository containing group 2's Project 1.
+
+This is an application that allows dog owners to register their pets, connect with other dog owners in their area to meet up and schedule walks or puppy play dates. 
 
 ## User Story
 * AS A dog owner
@@ -8,6 +9,8 @@ Repository containing group 2's Project 1.
 
 ## Deployed Application
 Link to deployed application: https://davidszamek.github.io/puppy-pals/
+
+Link to Github repo: https://github.com/DavidSzamek/puppy-pals 
 
 ## Application Screenshot
 The following image shows the web application's appearance and functionality:
@@ -20,9 +23,18 @@ The following image shows the web application's appearance and functionality:
 
 ![image](https://user-images.githubusercontent.com/84214872/125263473-66645780-e346-11eb-8c8d-77b4a76cab19.png)
 
+## Challenges 
 
+- Working collaboratively on Github through merges, conflicts and pull requests. 
 
+- Availability of team members 
 
+- Interacting with new third party API's 
 
+## Future Development
 
+- Opportunities for further interactivity via extra communication features (message inbox, history, chatlog), social features (favourite, match) and a community section for networking
 
+- Updated the UX/UI for a better flow
+
+- Proper login form validation to protect our users 
