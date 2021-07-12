@@ -7,6 +7,7 @@ var messageDogEL = $('#messageDog');
 var closeModalEL = $('.delete');
 var displayResultsEL = $('#displayResults');
 var searchBlockEL = $('#searchBlock');
+var searchFieldEL = $('#addressLookup');
 //document selectors
 
 //Fetch API URL's
@@ -17,7 +18,12 @@ var nameURL = 'https://randomuser.me/api?nat=au';
 //Function to handle a random dog search
 function handleSubmit () {
 
-    // event.preventDefault();
+    if (searchFieldEL.val().length < 1) {
+
+        $('.notification').removeClass('hideBlock');
+
+        return;
+    };
 
     displayDogImage();
     randdomName();
@@ -78,7 +84,13 @@ function randdomName () {
 //Opens modal to allow user to message the matched dog
 function messageDog () {
 
-    // $('.modal').addClass("is-active");
+    var matchedDog = {
+        name: dogNameResponse.innerHTML,
+        image: dogImageEL.attr('src'),
+        style: dogImageEL.attr('style'),
+    }
+
+    localStorage.setItem('matchedDog', JSON.stringify(matchedDog));
 
     location.replace("pet-message-page.html");
 
@@ -110,6 +122,18 @@ function init () {
     closeModalEL.on('click', closeModal);
 
     $('img').on('load', scaleImage);
+
+    document.addEventListener('DOMContentLoaded', () => {
+        (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+          const $notification = $delete.parentNode;
+      
+          $delete.addEventListener('click', () => {
+            $notification.classList.add('hideBlock');
+          });
+        });
+      });
+
+   
 };
 
 //first function called

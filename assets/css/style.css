@@ -1,5 +1,5 @@
 /* Adding fixed postion to the bottom for our footer at desktop size */
-.custom-footer {
+.custom-footer .notification {
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -24,4 +24,8 @@
 .custom-container {
     width: fit-content;
     margin: auto;
-};
+}
+
+.custom-main {
+    height: calc(100vh - 60px);
+}

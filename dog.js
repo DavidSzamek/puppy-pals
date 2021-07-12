@@ -13,9 +13,41 @@ $('#email').val(person.email);
 
 console.log(person);
 
-$('#send').click(function(){
+$('#send').click(function(event){
 
-    location.replace('landing-page-with-profile.html');
+    event.preventDefault();
 
-})
+    $('.notification').removeClass('hideBlock');
+
+    setInterval(function (){
+        location.replace('landing-page-with-profile.html');
+    }, 1000);    
+
 });
+
+person.dogsRegistered.forEach(dog => {
+
+    $('#yourDogEL').append('<option>'+ dog.dogName +'</option>');
+    
+});
+
+var matchedDogOut = JSON.parse(localStorage.getItem('matchedDog'));
+
+$('#dogName').text(matchedDogOut.name);
+
+$('#dogImageResponse').attr('src', matchedDogOut.image);
+$('#dogImageResponse').attr('style', matchedDogOut.style);
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+      const $notification = $delete.parentNode;
+  
+      $delete.addEventListener('click', () => {
+        $notification.classList.add('hideBlock');
+      });
+    });
+  });
+
+});
+
